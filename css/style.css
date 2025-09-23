@@ -1,0 +1,261 @@
+/* Aula 05 - Flexbox e Grid */
+/* style.css Luxury Cars */
+
+:root {
+  --cor-primaria: #000000;   
+  --cor-secundaria: #222222; 
+  --cor-fundo: #f5f5f5;      
+  --cor-texto: #333333;      
+  --cor-branca: #ffffff;     
+  --cor-borda: #ddd;         
+  --cor-destaque: #c9a227;   
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+header {
+  background-color: var(--cor-branca);
+  color: var(--cor-primaria);
+  padding: 1rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-borda);
+
+ 
+  grid-column: 1 / -1;
+}
+
+aside {
+    grid-column: 1;
+}
+
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-branca);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--cor-branca);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  
+  grid-column: 2;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+main p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+.inicio-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.inicio-cards div {
+  flex: 1 1 280px;
+  background-color: var(--cor-fundo);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio-cards div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inicio-cards h3 {
+  margin-bottom: 0.8rem;
+  color: var(--cor-secundaria);
+}
+
+.inicio-cards p {
+  font-size: 0.95rem;
+  color: var(--cor-texto);
+}
+
+
+.centralizar-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem; 
+}
+
+table caption {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--cor-secundaria);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid var(--cor-borda);
+}
+
+table thead tr {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+}
+
+table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+form {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+aside {
+  grid-column: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: var(--cor-primaria);
+  color: #bbb;
+
+
+  grid-column: 1 / -1;
+}
+
+footer a {
+  color: var(--cor-branca);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
