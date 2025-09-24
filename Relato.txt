@@ -1,0 +1,5 @@
+Nesse trabalho eu usei media queries pra deixar o site mais responsivo.  
+Coloquei dois pontos de ajuste (1024px e 768px) e mudei o menu pra ficar em coluna quando a tela é menor.  
+Também diminui o tamanho das fontes e deixei as imagens se adaptarem melhor no celular.  
+Na parte de acessibilidade, adicionei descrição nas imagens, cuidei do contraste das cores e deixei os botões/links com foco visível pra usar no teclado.  
+O site ficou bem mais fácil de usar em qualquer tela, mas ainda quero melhorar o menu no celular com um estilo tipo hambúrguer.
